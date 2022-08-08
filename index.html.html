@@ -1,0 +1,60 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8" />  
+        <title>javascript</title>
+        <style>
+            .top{
+                display:flex;
+            }
+            .label{
+                text-align: center;
+                background-color: aquamarine;
+                margin:10px;
+                padding:10px;
+                border-radius: 5px;
+                cursor:pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="top">
+            <div class="label" onmouseover="func1()">About ME</div>
+            <div class="label" onmouseover="func2()">ELSE</div>
+            <div class="label" onmousedown="down(this)" onmouseup="up(this)">BOOM</div>
+        </div>
+        <hr/>
+        <div id="a">I'm Eric</div>
+        <div id="b" style="display:none">I have big dick</div>
+        <script>
+            function func(){
+                let elem=document.querySelector("#content");
+                //elem.innerHTML="123456";
+                elem.className="text";
+                elem.style.fontSize="50px";
+            }
+            function func1(){
+                let a=document.querySelector("#a");
+                let b=document.querySelector("#b");
+                b.style.display="none";
+                a.style.display="block";
+            }
+            function func2(){
+                let a=document.querySelector("#a");
+                let b=document.querySelector("#b");
+                a.style.display="none";
+                b.style.display="block";
+            }
+            function change(elem){
+                elem.innerHTML="DEAD";
+            }
+            function down(elem){
+                elem.style.color="red";
+            }
+            function up(elem){
+                elem.style.color="blue";
+            }
+        </script>
+    </body>
+</html>
